@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+</head>
+<body>
+  <div id="app">Loading...</div>
+  <script>
+    window.$docsify = {
+      repo: 'zhenAndhan/notes',//配置仓库地址
+      name: '主页',//文档标题
+      nameLink: '/',//点击文档标题后跳转的链接地址
+
+      //loadSidebar: true,//_sidebar.md如果为真，则从_sidebar.md文件加载边栏，否则从指定的路径加载
+      auto2top: true,  //当路线改变时,滚动到屏幕的顶部
+      loadNavbar: true,//_navbar.md如果为真，则从_navbar.md文件加载navbar ，否则从指定的路径加载
+      mergeNavbar: true,//Navbar将在小屏幕上与侧边栏合并
+      executeScript: true,//执行页面上的脚本。只解析第一个脚本标记（演示）。如果存在Vue，则默认开
+      maxLevel: 6,//最大的内容表级别
+      //subMaxLevel: 6,//在自定义边栏中添加目录（TOC)
+      externalLinkTarget: '_blank', //外链打开方式：_blank表示在新标签页中打开
+      coverpage: true,//启用封面页
+      onlyCover: true,//首页只显示封面
+      topMargin: 60,//调整top
+      //executeScript: true,//执行页面上的脚本，仅解析第一个脚本标签
+      search: {
+        paths: 'auto',
+        placeholder: '🔍 搜索',
+        noData: '😒 找不到结果',
+        // Headline depth, 1 - 6
+        depth: 6,
+        maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+      },//添加搜索框
+
+      //分页
+      pagination: {
+          previousText: '上一章节',
+          nextText: '下一章节',
+          crossChapter: true,
+          crossChapterText: true,
+      },
+      //字词统计
+      count:{
+          countable:true,
+          fontsize:'0.9em',
+          color:'rgb(90,90,90)',
+          language:'chinese'
+      },
+
+      //代码一键复制
+      copyCode: {
+          buttonText: '复制',
+          errorText: 'Error',
+          successText: '复制成功'
+      },
+      //Tab分标签
+      tabs: {
+        persist    : true,      // default
+        sync       : true,      // default
+        theme      : 'material',// material classic(default)
+        tabComments: true,      // default
+        tabHeadings: true       // default
+      }
+
+    }
+  </script>
+  <!-- Docsify v4 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- docsify-tabs (latest v1.x.x) -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+
+
+  <!-- 代码块复制 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+  <!-- 图片缩放 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <!-- 全文搜索插件Search -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <!-- 代码高亮 -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-c.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-cpp.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-bash.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-java.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-sql.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-c.js"></script>
+  <script src="//unpkg.com/prismjs@1.23.0/components.js"></script>
+  <!-- 字词统计 -->
+  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+
+
+  <!-- 小萝莉 -->
+  <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
+  <script>
+    L2Dwidget.init({
+      "model": {
+        //jsonpath控制显示那个小萝莉模型，
+        //(切换模型需要改动)
+        jsonPath: "https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json",
+        "scale": 1
+      },
+      "display": {
+        "position": "right", //看板娘的表现位置
+        "width": 70,  //小萝莉的宽度
+        "height": 140, //小萝莉的高度
+        "hOffset": 35,
+        "vOffset": -20
+      },
+      "mobile": {
+        "show": true,
+        "scale": 0.5
+      },
+      "react": {
+        "opacityDefault": 0.7,
+        "opacityOnHover": 0.2
+      }
+    });
+  </script>
+
+
+</body>
+</html>
