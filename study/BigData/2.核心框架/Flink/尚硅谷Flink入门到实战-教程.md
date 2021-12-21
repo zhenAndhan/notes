@@ -37,13 +37,47 @@
 #### **Java**
 
 ```xml
+<properties>
+    <flink.version>1.13.0</flink.version>
+    <java.version>1.8</java.version>
+    <scala.binary.version>2.12</scala.binary.version>
+</properties>
 
+<dependencies>
+    <dependency>
+        <groupId>org.apache.flink</groupId>
+        <artifactId>flink-java</artifactId>
+        <version>${flink.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.flink</groupId>
+        <artifactId>flink-streaming-java_${scala.binary.version}</artifactId>
+        <version>${flink.version}</version>
+    </dependency>
+</dependencies>
 ```
 
 #### **Scala**
 
 ```xml
+<properties>
+    <flink.version>1.13.0</flink.version>
+    <scala.binary.version>2.12</scala.binary.version>
+</properties>
 
+<dependencies>
+    <dependency>
+        <groupId>org.apache.flink</groupId>
+        <artifactId>flink-scala_${scala.binary.version}</artifactId>
+        <version>${flink.version}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.flink/flink-streaming-scala -->
+    <dependency>
+        <groupId>org.apache.flink</groupId>
+        <artifactId>flink-streaming-scala_${scala.binary.version}</artifactId>
+        <version>${flink.version}</version>
+    </dependency>
+</dependencies>
 ```
 
 <!-- tabs:end -->
